@@ -15,11 +15,15 @@ def line(katz_deli)
   end
 end
 
+$number = 0
 def take_a_number(katz_deli)
-  number = 1
-  puts "Welcome, You are number #{katz_deli.size} in line."
-  number += 1
+  $number += 1
+  katz_deli << $number
+  puts "Welcome, You are number #{$number} in line."
+
 end
+
+puts take_a_number(katz_deli)
 
 def now_serving(katz_deli)
   if katz_deli.empty?
